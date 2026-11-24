@@ -1,0 +1,21 @@
+name: ci
+on: [push, pull_request]
+
+permissions:
+  contents: read
+
+jobs:
+  checks:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Check shell script syntax
+        run: bash -n *.sh
+      - uses: astral-sh/setup-uv@v6
+        with:
+          version: "0.13.8"
+          python-version: "3.12"
+      - run: uvx ruff check mc-powerd.py
+      - run: uvx ruff format --check mc-powerd.py
