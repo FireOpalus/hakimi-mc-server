@@ -31,7 +31,7 @@ ARCHIVE="$BACKUP_DIR/hakimi-mc-$TS.tar.gz"
 TMP_ARCHIVE="$BACKUP_DIR/.hakimi-mc-$TS.tar.gz.tmp"
 
 TARGETS=()
-for item in world world_nether world_the_end plugins/LibreLogin whitelist.json ops.json server.properties; do
+for item in world world_nether world_the_end plugins/LibreLogin plugins/SkinsRestorer whitelist.json ops.json server.properties; do
   if [ -e "$DATA_DIR/$item" ]; then
     TARGETS+=("$item")
   fi

@@ -377,6 +377,7 @@ def print_invite_card(
 1. 打开 {SUPPORTED_VERSIONS} 客户端，多人游戏 -> 添加服务器：
    地址填写：{SERVER_ADDR}
 2. {login_guide}
+3. 皮肤说明：正版账号进服自动显示皮肤；所有玩家均可输入 /skin <正版ID>、/skin url <图片直链> 或 /skins 自由换肤。
 ==============================================================
 """.strip("\n")
     print(card)
